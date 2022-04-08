@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block corecss %}<link rel="stylesheet" href="{% static 'bench/css/style.css' %}">{% endblock corecss %}
+{% block title %} Bench | Home{% endblock title %}
+{% block nav %}
+<header>  
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                    
+                      <a class="nav-link {% if request.path == url %}active{% endif %}" href="{% url 'core-home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      {% url 'preprocessing' as url %}
+                      <a class="nav-link {% if request.path == url %}active{% endif %}" href="#">Preprocessing</a>
+                    </li>
+                    <li class="nav-item">
+                      {% url 'classification' as url %}
+                      <a class="nav-link {% if request.path == url %}active{% endif %}" href="#">Classification</a>
+                    </li>
+                    <li class="nav-item">
+                      {% url 'clustering' as url %}
+                      <a class="nav-link {% if request.path == url %}active{% endif %}" href="#">Clustering</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+    </nav>
+</header>
+{% endblock nav %}

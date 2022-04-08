@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %} 
+{% load static %} 
+
+{% block title %} Home {% endblock title %}
+
+
+{% block fontstyle %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+{% endblock fontstyle %}
+
+{% block corecss %}<link rel="stylesheet" href="{% static 'core/css/home.css' %}">{% endblock corecss %}
+
+{% block nav %}
+<nav>
+  <h1>Parkinson's Disease</h1>
+</nav>
+{% endblock nav %}
+
+{% block content%}
+<div>
+  <p>Parkinson's disease (PD), or simply Parkinson's is a long-term degenerative disorder of the central nervous system that mainly affects the motor system. The most obvious early symptoms are tremor, rigidity, slowness of movement, and difficulty
+      with walking. Cognitive and behavioral problems may also occur with depression, anxiety, and apathy occurring in many people with PD.The motor symptoms of the disease result from the death of cells in the substantia nigra, a region of the
+      midbrain, leading to a dopamine deficit. The cause of this cell death is poorly understood, but involves the build-up of misfolded proteins into Lewy bodies in the neurons</p>
+</div>
+{%endblock content%}
+
+{% block main %}
+<main>
+
+  <div class="container-box">
+      <a href="{% url 'benchHome' %}" class="btn btn btn-dark btn-lg">Bench</a>
+  </div>
+  <div class="container-box">
+      <a href="#" class="btn btn-dark btn-lg">####</a>
+  </div>
+
+</main>
+
+{% endblock main %}
