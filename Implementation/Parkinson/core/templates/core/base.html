@@ -6,12 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>{% block title %} {% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+
+   {% block fontstyle %}{% endblock fontstyle %}
+   {% block corecss %} {% endblock corecss %}
 </head>
 
 <body>
-    hello
+    {% block nav %}
+    
+    {% endblock nav %}
+
+    {% block content %}{% endblock content %}
+    {% block main %}{% endblock main %}
+
+
+   
 </body>
 <script src="{% static 'core/js/jquery.js' %}"></script>
 <script src="{% static 'core/js/popper.js' %}"></script>
